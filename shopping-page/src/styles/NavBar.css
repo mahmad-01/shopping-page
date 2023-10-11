@@ -1,0 +1,21 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 82px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    background-color: #1a1a1a;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+}
+
+.links a{
+    color: white;
+}
+
