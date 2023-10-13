@@ -1,10 +1,7 @@
 import { useState, createContext, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import './App.css'
 import NavBar from './components/NavBar.jsx';
-import Shop from './pages/shop.jsx'
-import Cart from './pages/cart.jsx'
-import axios from 'axios';
 
 export const ShopContext = createContext({
   prodData: [],
@@ -15,11 +12,8 @@ export const ShopContext = createContext({
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(null);
   const [prodData, setProdData] = useState(null);
-
-
-
 
   useEffect(() => {
     setLoading(true);
@@ -30,14 +24,19 @@ function App() {
     .finally(() => setLoading(false))
   }, [])
 
- // const addToCart = () => {
-//  };
 
+  
+  const addToCart = () => {
+    return '';
+  };
 
   return (
     <>
+    <ShopContext.Provider value={{cartItems, prodData, addToCart}}>
       <NavBar/>
-      <Outlet context={ShopContext}/>
+      <Outlet/>
+    </ShopContext.Provider>
+
     </>
   )
 }

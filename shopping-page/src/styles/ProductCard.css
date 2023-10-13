@@ -1,0 +1,29 @@
+.card{
+    height:425px;
+    width: 325px;
+    overflow-wrap: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    gap: 15px;
+    padding: 5px;
+    padding-bottom: 30px;
+    border-radius: 25px;
+    border: 3px solid black;
+}
+
+.card h3{
+    padding: 5px;
+    position: absolute;
+    margin-top: 325px;
+}
+
+.card button{
+    padding: 10px;
+    position: absolute;
+    margin-top: 410px;
+}
